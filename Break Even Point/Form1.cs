@@ -35,32 +35,6 @@ namespace Break_Even_Point
 
         }
 
-        private void b_calcola_Click(object sender, EventArgs e)
-        {
-            try
-            {
-             
-                double prezzo = double.Parse(txtPrezzo.Text);
-                double costoVariabile = double.Parse(txtCostoVariabile.Text);
-                double costiFissi = double.Parse(txtCostiFissi.Text);
-                double venditePreviste = double.Parse(txtVenditePreviste.Text);
 
-               
-                double mcu = prezzo - costoVariabile;
-                double bepUnita = costiFissi / mcu;
-                double bepValore = bepUnita * prezzo;
-                double risultato = (mcu * venditePreviste) - costiFissi;
-
-               
-
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show($"Errore nei dati: {ex.Message}", "Errore",
-                    MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-        }
-
-        
     }
 }
